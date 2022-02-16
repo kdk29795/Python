@@ -1,0 +1,48 @@
+# Encryption
+
+def encryption(plaintext,key):
+  estring = ''
+  for i in plaintext:
+    if i.isupper():
+      temp = 65 + ((ord(i) - 65 + key) % 26) 
+      estring = estring + chr(temp)                              
+    elif i.islower():
+      temp = 97 + ((ord(i) - 97 + key) % 26)
+      estring = estring + chr(temp)
+    else:
+      estring = estring + i  
+ 
+  print("The ciphertext is:",estring)
+ 
+plaintext = input("Enter the plaintext:")
+key = int(input("Enter the key:"))
+encryption(plaintext,key)
+
+
+#Decryption 
+
+def decryption(ciphertext,key):
+  dstring = ''
+  for i in ciphertext:
+    if i.isupper():
+      if ((ord(i) - 65 - key) < 0):
+        temp = 65 + ((ord(i) - 65 - key + 26) % 26) 
+      else:
+        temp = 65 + ((ord(i) - 65 - key) % 26) 
+      dstring = dstring + chr(temp)                              
+    elif i.islower():
+      if ((ord(i) - 97 - key) < 0):
+        temp = 97 + ((ord(i) - 97 - key + 26) % 26) 
+      else:
+        temp = 97 + ((ord(i) - 97 - key) % 26) 
+      dstring = dstring + chr(temp)
+    else:
+      dstring = dstring + i  
+ 
+  print("The plaintext is:",dstring)
+ 
+ciphertext = input("Enter the ciphertext:")
+key = int(input("Enter the key:"))
+decryption(ciphertext,key)
+
+
