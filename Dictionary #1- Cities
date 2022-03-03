@@ -1,0 +1,23 @@
+cities = {
+    'Marion': {
+        'country': 'united states',
+        'population': 5706,
+        'fact': 'named for American Revolutionary War officer Francis Marion',
+        },
+    'Kalispell': {
+        'country': 'united states',
+        'population': 23241,
+        'fact': 'name means flat land above the lake',
+        },  
+     'Seattle': {
+        'country': 'united states',
+        'population': 724305,
+        'fact': 'known as the Emerald City',
+        }
+     }
+     
+for city, info in cities.items():
+    print("\nCity: " + str(city).title())
+    print("\tPopulation: " + str(info['population']))
+    print("\tFact: " + info['fact'])
+     
