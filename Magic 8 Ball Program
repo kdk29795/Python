@@ -1,0 +1,30 @@
+import random 
+import time 
+response = random.randint(0,9)
+
+question = input("Ask the Magic 8 Ball a question: ")
+time.sleep(5)
+print("Searching for an answer.")
+print("Please be patient")
+time.sleep(1)
+
+#Random interger/responses
+
+if response == 1:
+    print("Yes")
+elif response == 2:
+    print("Ask again later")
+elif response == 3:
+    print("Future looks promising")
+elif response == 4:
+    print("No")
+elif response == 5:
+    print("More than likely")
+elif response == 6:
+    print("Cannot predict right now")
+elif response == 7:
+    print("The answer is no")
+elif response == 8:
+    print("Outlook does not look good")
+elif response == 9:
+    print("Most definitely")
